@@ -56,6 +56,8 @@ Plaintext
 ### Código JAVA
 
 ```Java
+import java.util.Scanner;
+
 class Ejercicio01 {
 
     public static void main(String[] args) {
@@ -148,6 +150,8 @@ Plaintext
 
 ### Código JAVA
 ```Java
+import java.util.Scanner;
+
 class Ejercicio02 {
 
     public static void main(String[] args) {
@@ -235,6 +239,8 @@ Plaintext
 
 ### Codigo JAVA
 ```Java
+import java.util.Scanner;
+
 class Ejercicio03 {
 
     public static void main(String[] args) {
@@ -324,6 +330,8 @@ Plaintext
 |3|9|36|54|27|
 ### Código JAVA
 ```Java
+import java.util.Scanner;
+
 class Ejercicio04 {
 
     public static void main(String[] args) {
@@ -426,6 +434,8 @@ _(Para un triángulo rectángulo clásico con vértices en $(0,0)$, $(3,0)$ y $(
 ### Código JAVA
 
 ```Java
+import java.util.Scanner;
+
 class Ejercicio05 {
 
     public static void main(String[] args) {
