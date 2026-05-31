@@ -16,8 +16,6 @@ Un constructor sabe que necesita 0.5 metros cúbicos de arena por metro cuadrado
 
 ### Pseudocódigo
 
-Plaintext
-
 ```
 Entrada
     Leer: largo, alto
@@ -29,8 +27,6 @@ Salida
 ```
 
 ### Diagrama de Flujo
-
-Plaintext
 
 ```
    ( Inicio )
@@ -109,8 +105,6 @@ Construya el algoritmo tal que, dado el radio, la generatriz y la altura de un c
 
 ### Pseudocódigo
 
-Plaintext
-
 ```
 Entrada
     Leer: radio, generatriz, altura
@@ -124,8 +118,6 @@ Salida
 ```
 
 ### Diagrama de Flujo
-
-Plaintext
 
 ```
           ( Inicio )
@@ -202,8 +194,6 @@ Construya un algoritmo tal que, dado el radio de una esfera, calcule e imprima e
 
 ### Pseudocódigo
 
-Plaintext
-
 ```
 Entrada
     Leer: radio
@@ -215,8 +205,6 @@ Salida
 ```
 
 ### Diagrama de Flujo
-
-Plaintext
 
 ```
            ( Inicio )
@@ -289,8 +277,6 @@ Construya el algoritmo tal que, dado como dato el lado de un hexaedro o cubo, ca
 
 ### Pseudocódigo
 
-Plaintext
-
 ```
 Entrada
     Leer: L
@@ -304,8 +290,6 @@ Salida
 ```
 
 ### Diagrama de Flujo
-
-Plaintext
 
 ```
          ( Inicio )
@@ -390,8 +374,6 @@ $$D=\sqrt{(X_1-X_2)^2+(Y_1-Y_2)^2}$$
 
 ### Pseudocódigo
 
-Plaintext
-
 ```
 Entrada
     Leer: X1, Y1, X2, Y2, X3, Y3
@@ -405,8 +387,6 @@ Salida
 ```
 
 ### Diagrama de Flujo
-
-Plaintext
 
 ```
                   ( Inicio )
