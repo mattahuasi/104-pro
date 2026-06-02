@@ -16,7 +16,7 @@ Escribir un algoritmo para lavar los platos de la comida.
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Booleano: tiene_grasa
     
@@ -35,21 +35,15 @@ Fin
 
 ### Diagrama de Flujo
 
-```
-         ( Inicio )
-              │
-     [/ leer tiene_grasa /]
-              │
-      < tiene_grasa == V ? >
-       Falso │    │ Verdadero
-             │    └──────────────┐
- [ Lavar con agua fría ]   [ Lavar con agua caliente ]
-             │                   │
-             └────────┬──────────┘
-                      │
-           [ Enjuagar y secar ]
-                      │
-                   ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer tiene_grasa/]
+    B --> C{tiene_grasa == V?}
+    C -- Falso --> D[/Lavar con agua fría/]
+    C -- Verdadero --> E[/Lavar con agua caliente/]
+    D --> F[/Enjuagar y secar/]
+    E --> F
+    F --> G([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -102,7 +96,7 @@ Escribir un algoritmo para reparar un pinchazo de bicicleta.
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Booleano: agujero_grande
     
@@ -122,23 +116,16 @@ Fin
 
 ### Diagrama de Flujo
 
-```
-         ( Inicio )
-              │
-    [ Desmontar llanta ]
-              │
-    [/ leer agujero_grande /]
-              │
-     < agujero_grande == V ? >
-       Falso │    │ Verdadero
-             │    └─────────────┐
-     [ Colocar un parche ]  [ Reemplazar cámara ]
-             │                  │
-             └────────┬─────────┘
-                      │
-       [ Inflar y montar llanta ]
-                      │
-                   ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[Desmontar llanta]
+    B --> C[/Leer agujero_grande/]
+    C --> D{agujero_grande == V?}
+    D -- Falso --> E[/Colocar un parche/]
+    D -- Verdadero --> F[/Reemplazar cámara/]
+    E --> G[/Inflar y montar llanta/]
+    F --> G
+    G --> H([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -193,7 +180,7 @@ Construya un algoritmo dado como dato la calificación de un alumno en un examen
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Real: calificacion
     
@@ -209,19 +196,15 @@ Fin
 
 ### Diagrama de Flujo
 
-```
-          ( Inicio )
-               │
-      [/ leer calificacion /]
-               │
-       < calificacion >= 8 ? >
-        Falso │    │ Verdadero
-              │    └─────────────┐
-  [/ mostrar "REPROBADO" /]  [/ mostrar "APROBADO" /]
-              │                  │
-              └────────┬─────────┘
-                       │
-                    ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer calificacion/]
+    B --> C{calificacion >= 8?}
+    C -- Falso --> D[/"Mostrar 'REPROBADO'"/]
+    C -- Verdadero --> E[/"Mostrar 'APROBADO'"/]
+    D --> F
+    E --> F
+    F([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -247,7 +230,7 @@ Construya un algoritmo dado como dato el sueldo de un trabajador, aplique un aum
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Real: sueldo, nuevo_sueldo
     
@@ -265,21 +248,15 @@ Fin
 
 ### Diagrama de Flujo
 
-```
-             ( Inicio )
-                  │
-            [/ leer sueldo /]
-                  │
-            < sueldo < 1000 ? >
-           Falso │    │ Verdadero
-                 │    └────────────────┐
-[ nuevo_sueldo = sueldo * 1.12 ] [ nuevo_sueldo = sueldo * 1.15 ]
-                 │                     │
-                 └─────────┬───────────┘
-                           │
-               [/ mostrar nuevo_sueldo /]
-                           │
-                        ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer sueldo/]
+    B --> C{sueldo < 1000?}
+    C -- Falso --> D[nuevo_sueldo = sueldo * 1.12]
+    C -- Verdadero --> E[nuevo_sueldo = sueldo * 1.15]
+    D --> F[/Mostrar nuevo_sueldo/]
+    E --> F
+    F --> G([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -333,7 +310,7 @@ Construya un algoritmo dado como datos la matricula y 5 calificaciones de un alu
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Cadena: matricula
     Real: c1, c2, c3, c4, c5, promedio
@@ -355,23 +332,17 @@ Fin
 
 ### Diagrama de Flujo
 
-```
-                ( Inicio )
-                     │
-    [/ leer matricula, c1, c2, c3, c4, c5 /]
-                     │
-    [ promedio = (c1+c2+c3+c4+c5) / 5 ]
-                     │
-     [/ mostrar matricula, promedio /]
-                     │
-             < promedio >= 6 ? >
-            Falso │    │ Verdadero
-                  │    └───────────────┐
-  [/ mostrar "No aprobado" /]  [/ mostrar "Aprobado" /]
-                  │                    │
-                  └────────┬───────────┘
-                           │
-                        ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer matricula, c1, c2, c3, c4, c5/]
+    B --> C[promedio = c1 + c2 + c3 + c4 + c5 / 5]
+    C --> D[/Mostrar matricula, promedio/]
+    D --> E{promedio >= 6?}
+    E -- Falso --> F[/"Mostrar 'No aprobado'"/]
+    E -- Verdadero --> G[/"Mostrar 'Aprobado'"/]
+    F --> H
+    G --> H
+    H([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -397,7 +368,7 @@ Construye un algoritmo que, dado el nombre del grupo y el numero de alumnos pre-
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Cadena: nombre_grupo
     Entero: num_alumnos
@@ -417,23 +388,16 @@ Fin
 
 ### Diagrama de Flujo
 
-```
-( Inicio )
-                    │
-   [/ Leer: nombre_grupo, num_alumnos /]
-                    │
-   [/ Mostrar: nombre_grupo, num_alumnos /]
-                    │
-          < ¿num_alumnos >= 30? >
-           /                 \
-    Falso /                   \ Verdadero
-         /                     \
-[/ Mostrar: "CERRADO" /]   [/ Mostrar: "ABIERTO" /]
-         \                     /
-          \                   /
-           └─────────┬───────┘
-                     │
-                  ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/"Leer nombre_grupo, num_alumnos"/]
+    B --> C[/"Mostrar nombre_grupo, num_alumnos"/]
+    C --> D{"¿num_alumnos >= 30?"}
+    D -- Falso --> E[/"Mostrar 'CERRADO'"/]
+    D -- Verdadero --> F[/"Mostrar 'ABIERTO'"/]
+    E --> G
+    F --> G
+    G([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -493,7 +457,7 @@ Escribe un algoritmo que calcule el descuento considerando las siguientes especi
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Real: monto, descuento, total
     
@@ -513,25 +477,16 @@ Fin
 
 ### Diagrama de Flujo
 
-```
-( Inicio )
-                    │
-             [/ Leer: monto /]
-                    │
-            < ¿monto > 100? >
-             /             \
-      Falso /               \ Verdadero
-           /                 \
-  [ descuento = monto*0.02 ] [ descuento = monto*0.10 ]
-           \                 /
-            \               /
-             └──────┬──────┘
-                    │
-        [ total = monto - descuento ]
-                    │
-    [/ Mostrar: descuento, total /]
-                    │
-                ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/"Leer monto"/]
+    B --> C{"¿monto > 100?"}
+    C -- Falso --> D[descuento = monto * 0.02]
+    C -- Verdadero --> E[descuento = monto * 0.10]
+    D --> F
+    E --> F[total = monto - descuento]
+    F --> G[/"Mostrar: descuento, total"/]
+    G --> H([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -587,7 +542,7 @@ Escriba un algoritmo que imprima el nombre y marcador con el cual es ganador un 
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Cadena: equipoA, equipoB
     Entero: gA, pA, gB, pB, totalA, totalB
@@ -612,31 +567,23 @@ Fin
 
 ### Diagrama de flujo
 
-```
-( Inicio )
-                             │
-     [/ Leer: equipoA, gA, pA, equipoB, gB, pB /]
-                             │
-            [ totalA = gA + pA ]
-            [ totalB = gB + pB ]
-                             │
-                   < ¿totalA > totalB? >
-                    /                 \
-             Falso /                   \ Verdadero
-                  /                     \
-       < ¿totalB > totalA? >      [/ Mostrar: Ganador equipoA, /]
-        /                 \       [/ marcador totalA a totalB  /]
- Falso /                   \ Verdadero           │
-      /                     \                    │
-[/ Mostrar: "Empate" /]  [/ Mostrar: Ganador equipoB, /] │
-      \                  [/ marcador totalB a totalA  /] │
-       \                          /              │
-        \                        /               │
-         └───────────┬──────────┘                │
-                     │                           │
-                     └─────────────────┬─────────┘
-                                       │
-                                    ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/"Leer: equipoA, gA, pA, equipoB, gB, pB"/]
+    B --> C[totalA = gA + pA]
+    C --> D[totalB = gB + pB]
+    D --> E{"¿totalA > totalB?"}
+    
+    E -- Verdadero --> F[/"Mostrar: Ganador equipoA, marcador totalA a totalB"/]
+    E -- Falso --> G{"¿totalB > totalA?"}
+    
+    G -- Verdadero --> H[/"Mostrar: Ganador equipoB, marcador totalB a totalA"/]
+    G -- Falso --> I[/"Mostrar: 'Empate'"/]
+    
+    F --> J
+    H --> J
+    I --> J
+    J([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -724,7 +671,7 @@ Construya un algoritmo dado como dato un numero entero. Determine e imprima si e
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Entero: numero
     
@@ -744,27 +691,21 @@ Fin
 
 ### Diagrama de flujo
 
-```
-( Inicio )
-                             │
-                     [/ Leer: numero /]
-                             │
-                     < ¿numero > 0? >
-                    /                \
-             Falso /                  \ Verdadero
-                  /                    \
-          < ¿numero < 0? >        [/ Mostrar:      /]
-           /            \         [/ "POSITIVO"    /]
-    Falso /              \ Verdadero     │
-         /                \              │
-[/ Mostrar: "NULO" /]  [/ Mostrar: "NEGATIVO" /] │
-         \                /              │
-          \              /               │
-           └─────┬──────┘                │
-                 │                       │
-                 └───────────┬───────────┘
-                             │
-                          ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/"Leer: numero"/]
+    B --> C{"¿numero > 0?"}
+    
+    C -- Verdadero --> D[/"Mostrar: 'POSITIVO'"/]
+    C -- Falso --> E{"¿numero < 0?"}
+    
+    E -- Verdadero --> F[/"Mostrar: 'NEGATIVO'"/]
+    E -- Falso --> G[/"Mostrar: 'NULO'"/]
+    
+    D --> H
+    F --> H
+    G --> H
+    H([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -835,7 +776,7 @@ En una tienda efectúan un descuento a los clientes dependiendo del monto de la 
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Inicio
     Real: monto, porcentaje, descuento, total
     
@@ -869,38 +810,32 @@ Fin
 
 ### Diagrama de flujo
 
-```
-( Inicio )
-                                    │
-                            [/ Leer: monto /]
-                                    │
-                            < ¿monto < 500? >
-                             /             \
-                      Falso /               \ Verdadero
-                           /                 \
-                  < ¿monto <= 1000? >     [ porcentaje = 0.0 ]
-                   /               \                  │
-            Falso /                 \ Verdadero       │
-                 /                   \                │
-        < ¿monto <= 7000? >       [ porcentaje = 0.05 ]   │
-         /               \                  │         │
-  Falso /                 \ Verdadero       │         │
-       /                   \                │         │
-< ¿monto <= 15000? >    [ porcentaje = 0.11 ]   │     │
- /                \                 │       │         │
-/ Falso            \ Verdadero      │       │         │
-/                    \              │       │         │
-[porcentaje = 0.25] [porcentaje = 0.18]     │       │         │
-\                    /              │       │         │
- └─────────┬────────┘               │       │         │
-           └────────────────────────┴───────┴─────────┘
-                                    │
-                      [ descuento = monto * porcentaje ]
-                      [ total = monto - descuento      ]
-                                    │
-                        [/ Mostrar: descuento, total /]
-                                    │
-                                 ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/"Leer: monto"/]
+    B --> C{"¿monto < 500?"}
+    
+    C -- Verdadero --> D[porcentaje = 0.0]
+    C -- Falso --> E{"¿monto <= 1000?"}
+    
+    E -- Verdadero --> F[porcentaje = 0.05]
+    E -- Falso --> G{"¿monto <= 7000?"}
+    
+    G -- Verdadero --> H[porcentaje = 0.11]
+    G -- Falso --> I{"¿monto <= 15000?"}
+    
+    I -- Verdadero --> J[porcentaje = 0.18]
+    I -- Falso --> K[porcentaje = 0.25]
+    
+    D --> L
+    F --> L
+    H --> L
+    J --> L
+    K --> L
+    
+    L[descuento = monto * porcentaje] --> M[total = monto - descuento]
+    M --> N[/"Mostrar: descuento, total"/]
+    N --> O([Fin])
 ```
 
 ### Prueba de Escritorio
