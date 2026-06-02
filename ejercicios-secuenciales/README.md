@@ -16,7 +16,7 @@ Un constructor sabe que necesita 0.5 metros cúbicos de arena por metro cuadrado
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Entrada
     Leer: largo, alto
 Proceso
@@ -28,18 +28,13 @@ Salida
 
 ### Diagrama de Flujo
 
-```
-   ( Inicio )
-       │
-   [/ leer largo, alto /]
-       │
-   [ area = largo * alto ]
-       │
-   [ arena = area * 0.5  ]
-       │
-   [/ mostrar arena /]
-       │
-    ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer largo, alto/]
+    B --> C[area = largo * alto]
+    C --> D[arena = area * 0.5]
+    D --> E[/Mostrar arena/]
+    E --> F([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -105,7 +100,7 @@ Construya el algoritmo tal que, dado el radio, la generatriz y la altura de un c
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Entrada
     Leer: radio, generatriz, altura
 Proceso
@@ -119,21 +114,16 @@ Salida
 
 ### Diagrama de Flujo
 
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer radio, gen, altura/]
+    B --> C[AB = 3.1416 * radio^2]
+    C --> D[AL = 3.1416 * radio * gen]
+    D --> E[AT = AB + AL]
+    E --> F[VOL = 1/3 * AB * altura]
+    F --> G[/Mostrar AB, AL, AT, VOL/]
+    G --> H([Fin])
 ```
-          ( Inicio )
-               │
-   [/ leer radio, gen, altura /]
-               │
-   [ AB = 3.1416 * radio^2      ]
-   [ AL = 3.1416 * radio * gen  ]
-   [ AT = AB + AL               ]
-   [ VOL = (1/3) * AB * altura  ]
-               │
-   [/ mostrar AB, AL, AT, VOL /]
-               │
-           ( Fin )
-```
-
 ### Prueba de Escritorio (Usando $\pi \approx 3.1416$)
 
 | **radio** | **generatriz** | **altura** | **AB** | **AL** | **AT** | **VOL** |
@@ -194,7 +184,7 @@ Construya un algoritmo tal que, dado el radio de una esfera, calcule e imprima e
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Entrada
     Leer: radio
 Proceso
@@ -206,17 +196,13 @@ Salida
 
 ### Diagrama de Flujo
 
-```
-           ( Inicio )
-               │
-         [/ leer radio /]
-               │
-   [ Area = 4 * 3.1416 * radio^2     ]
-   [ Volumen = (4/3)*3.1416 * radio^3 ]
-               │
-      [/ mostrar Area, Volumen /]
-               │
-            ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer radio/]
+    B --> C[Area = 4 * 3.1416 * radio^2]
+    C --> D[Volumen = 4/3 * 3.1416 * radio^3]
+    D --> E[/Mostrar Area, Volumen/]
+    E --> F([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -277,7 +263,7 @@ Construya el algoritmo tal que, dado como dato el lado de un hexaedro o cubo, ca
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Entrada
     Leer: L
 Proceso
@@ -291,19 +277,15 @@ Salida
 
 ### Diagrama de Flujo
 
-```
-         ( Inicio )
-              │
-          [/ leer L /]
-              │
-   [ AB = L^2       ]
-   [ AL = 4 * L^2   ]
-   [ AT = 6 * L^2   ]
-   [ V = L^3        ]
-              │
-   [/ mostrar AB, AL, AT, V /]
-              │
-          ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer L/]
+    B --> C[AB = L^2]
+    C --> D[AL = 4 * L^2]
+    D --> E[AT = 6 * L^2]
+    E --> F[V = L^3]
+    F --> G[/Mostrar AB, AL, AT, V/]
+    G --> H([Fin])
 ```
 
 ### Prueba de Escritorio
@@ -374,7 +356,7 @@ $$D=\sqrt{(X_1-X_2)^2+(Y_1-Y_2)^2}$$
 
 ### Pseudocódigo
 
-```
+```Plaintext
 Entrada
     Leer: X1, Y1, X2, Y2, X3, Y3
 Proceso
@@ -388,28 +370,22 @@ Salida
 
 ### Diagrama de Flujo
 
-```
-                  ( Inicio )
-                       │
-       [/ leer X1, Y1, X2, Y2, X3, Y3 /]
-                       │
-   [ D1 = Raiz((X1-X2)^2 + (Y1-Y2)^2)   ]
-   [ D2 = Raiz((X2-X3)^2 + (Y2-Y3)^2)   ]
-   [ D3 = Raiz((X3-X1)^2 + (Y3-Y1)^2)   ]
-   [ Perimetro = D1 + D2 + D3           ]
-                       │
-              [/ mostrar Perimetro /]
-                       │
-                    ( Fin )
+```mermaid
+graph TD
+    A([Inicio]) --> B[/Leer X1, Y1, X2, Y2, X3, Y3/]
+    B --> C["D1 = Raiz((X1-X2)^2 + (Y1-Y2)^2)"]
+    C --> D["D2 = Raiz((X2-X3)^2 + (Y2-Y3)^2)"]
+    D --> E["D3 = Raiz((X3-X1)^2 + (Y3-Y1)^2)"]
+    E --> F[Perimetro = D1 + D2 + D3]
+    F --> G[/Mostrar Perimetro/]
+    G --> H([Fin])
 ```
 
 ### Prueba de Escritorio
 
-_(Para un triángulo rectángulo clásico con vértices en $(0,0)$, $(3,0)$ y $(0,4)$)_
-
-|**X1**|**Y1**|**X2**|**Y2**|**X3**|**Y3**|**D1**|**D2**|**D3**|**Perimetro**|
-|---|---|---|---|---|---|---|---|---|---|
-|0|0|3|0|0|4|3.0|5.0|4.0|**12.0**|
+| **X1** | **Y1** | **X2** | **Y2** | **X3** | **Y3** | **D1** | **D2** | **D3** | **Perimetro** |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------------- |
+| 0      | 0      | 3      | 0      | 0      | 4      | 3.0    | 5.0    | 4.0    | **12.0**      |
 
 ### Código JAVA
 
