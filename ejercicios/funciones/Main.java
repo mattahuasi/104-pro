@@ -1,3 +1,5 @@
+package ejercicios.funciones;
+
 import java.util.Scanner;
 
 public class Main {
